@@ -1,8 +1,13 @@
- const express = require("express"); // Import express
-const app = express(); // Create an instance of express
-const port = 8000; // puerto de escucha
+// Importar express
+const express = require("express");
 
-// Inicializacion del servidor y primera ruta
+// Importar configuración (ejemplo: { port: 3000 })
+const { port } = require("./config/env");
+
+// Crear instancia de express
+const app = express();
+
+// Ruta inicial
 app.get("/", (req, res) => {
   res.send("Hola mi server en Express");
 });
